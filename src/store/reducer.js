@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux';
 
-export const reducer =  (state = { result: '#ffffff' }, action) => {
+export const styles = (state = {}, action) => {
     switch (action.type) {
         case 'UPDATE_COLOR':
         console.log(action)
             return {
-                result: action.payload
+                fontColor: action.payload
             }
         default:
             return state
@@ -13,5 +13,5 @@ export const reducer =  (state = { result: '#ffffff' }, action) => {
 }
 
 export default combineReducers({
-    reducer
+    styles
 });
